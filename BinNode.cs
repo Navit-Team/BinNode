@@ -29,14 +29,14 @@ namespace BinaryTrees
 		public void SetValue(T value) { this.value = value; }
 		public void SetLeft(BinNode<T> left)
 		{
-			if (left == null) { left = null; return; }
+			if (left == null) { this.left = null; return; }
 			this.left = new BinNode<T>(left.value);
 			this.left.SetLeft(left.left);
 			this.left.SetRight(left.right);
 		}
 		public void SetRight(BinNode<T> right)
 		{
-			if (right == null) { right = null; return; }
+			if (right == null) { this.right = null; return; }
 			this.right = new BinNode<T>(right.value);
 			this.right.SetLeft(right.left);
 			this.right.SetRight(right.right);
